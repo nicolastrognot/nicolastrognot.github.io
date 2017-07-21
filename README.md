@@ -11,15 +11,26 @@ PSU_2016_ftrace
 
 PSU_2016_malloc
 
+PSU_2016_myftp
+
+PSU_2016_nmobjdump
+
+PSU_2016_philo
+  
+PSU_2016_strace
 
 
 ### C++
-
+cpp_nanotekspice
 
 
 
 ### OCAML
+OCAML_2016_agenda
 
+OCAML_2016_mylist
+
+OCAML_2016_trainmanager
 
 
 
