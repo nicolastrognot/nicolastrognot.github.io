@@ -5,3 +5,20 @@ Here I am to publicize my work, you will find a summary of my projects below. Mo
 
 
 ---
+
+### C
+
+
+
+
+### C++
+
+
+
+
+### OCAML
+
+
+
+
+### ASM
