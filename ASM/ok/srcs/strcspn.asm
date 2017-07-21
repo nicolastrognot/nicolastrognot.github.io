@@ -1,0 +1,26 @@
+section .text				;
+	global strcspn:function		;
+
+strcspn:				;
+	mov	rcx, -1			;
+	cmp	rdi, 0h			;
+	je	strcspn_null		;
+strcspn_begin:				;
+	inc	rcx			;
+	cmp	byte[rdi + rcx], 0h	;
+	je	strcspn_end		;
+	mov	r10, -1			;
+strcspn_intern:				;
+	inc	r10			;
+	cmp	byte[rsi + r10], 0h	;
+	je	strcspn_begin		;
+	mov	al, byte[rdi + rcx]	;
+	cmp	al, byte[rsi + r10]	;
+	je	strcspn_end		;
+	jmp	strcspn_intern		;
+strcspn_end:				;
+	mov	rax, rcx		;
+	ret				;
+strcspn_null:				;
+	mov	rax, 0h			;
+	ret				;

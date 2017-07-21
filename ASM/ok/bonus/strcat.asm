@@ -1,0 +1,27 @@
+section .text				;
+	global strcat:function		;
+
+strcat:					;
+	mov	r10, rdi		;
+	cmp	rsi, 0h			;
+	je	strcat_end		;
+	cmp	rdi, 0h			;
+	jne	strcat_end_s1		;
+	mov	r10, rsi		;
+	je	strcat_end		;
+strcat_end_s1:				;
+	cmp	byte[rdi], 0h		;
+	je	strcat_begin		;
+	inc	rdi			;
+	jmp	strcat_end_s1		;
+strcat_begin:				;
+	mov	al, byte[rsi]		;
+	mov	byte[rdi], al		;
+	cmp	byte[rsi], 0h		;
+	je	strcat_end		;
+	inc	rdi			;
+	inc	rsi			;
+	jmp	strcat_begin		;
+strcat_end:				;
+	lea	rax, [r10]		;
+	ret				;

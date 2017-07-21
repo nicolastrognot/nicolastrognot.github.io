@@ -1,0 +1,25 @@
+section .text				;
+	global rindex:function		;
+
+rindex:					;
+	mov	r10, rdi		;
+	mov	r11, rsi		;
+	cmp	rdi, 0h			;
+	je	rindex_null		;
+	mov	rcx, -1			;
+rindex_begin:				;
+	inc	rcx			;
+	cmp	byte[r10 + rcx], 0h	;
+	je	rindex_end		;
+	cmp	[r10 + rcx], r11b	;
+	je	rindex_save		;
+	jmp	rindex_begin		;
+rindex_save:				;
+	mov	r12, rcx		;
+	jmp	rindex_begin		;
+rindex_end:				;
+	lea	eax, [r10 + r12]	;
+	ret				;
+rindex_null:				;
+	mov	eax, 0h			;
+	ret				;

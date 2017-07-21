@@ -1,0 +1,20 @@
+section .text				;
+	global memcpy:function		;
+
+memcpy:					;
+	mov	rcx, 0h			;
+	cmp	rdi, 0h			;
+	je	memcpy_null		;
+memcpy_loop:				;
+	cmp	rdx, rcx		;
+	je	memcpy_end		;
+	mov	al, byte [rsi + rcx]	;
+	mov	[rdi + rcx], al		;
+	inc	rcx			;
+	jmp	memcpy_loop		;
+memcpy_end:				;
+	mov	rax, rdi		;
+	ret				;
+memcpy_null:				;
+	mov	rax, 0h			;
+	ret				;

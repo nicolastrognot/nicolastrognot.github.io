@@ -1,0 +1,41 @@
+instructions :
+
+int    0x80 -> appel kernel ->exécution de la partie supérieure
+rax -> contient la valeur de retour d'une fonction
+rdx -> partie haute d'une valeur 128 bits -> ???
+rbx -> registre de stockage (utilisé ici pour le file descriptor)
+rcx -> compteur de boucle (iterateur)
+
+appels système :
+
+1 ->exit
+
+ex :
+mov	rax,1		; appel système 1 (exit)
+int	0x80		; appel kernel (execution)
+
+2 ->fork
+
+???
+
+3 ->read (%rcx, %rdx)
+
+???
+
+4 ->write
+
+ex :
+mov	rdx, 4		; contient ici la longueur du message à afficher (soit 4)
+mov	rcx, msg	; iteration sur le message à afficher (soit "bonjour")
+mov	rbx, 1		; file descriptor sur lequel on va ecrire (ici 1 -> standart output)
+mov	rax, 4		; appel système 4 (write)
+int	0x80 		; appel kernel (execution)
+
+5 ->open (%rcx, %rdx)
+
+???
+
+6 ->clcose
+
+???
+
