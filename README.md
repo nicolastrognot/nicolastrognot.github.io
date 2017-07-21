@@ -7,7 +7,7 @@ Here I am to publicize my work, you will find a summary of my projects below. Mo
 ---
 
 ## C
-**PSU_2016_ftrace**k
+**PSU_2016_ftrace**
 
 **PSU_2016_malloc**
 
