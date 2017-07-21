@@ -1,0 +1,19 @@
+.chipsets:
+input	set
+input	reset
+input	clock
+4013	FF
+output	a
+output	b
+
+.links:
+FF:5	FF:2
+a:1	FF:1
+reset:1	FF:4
+set:1	FF:6
+clock:1	FF:3
+FF:9	FF:12
+reset:1	FF:10
+FF:1	FF:11
+set:1	FF:8
+b:1	FF:13

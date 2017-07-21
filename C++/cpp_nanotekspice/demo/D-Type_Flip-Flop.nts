@@ -1,0 +1,19 @@
+#D Type Flip Flop
+
+.chipsets:
+clock		clock
+input		D
+input		reset
+
+output		Q
+output		/Q
+
+4013		DType
+
+.links:
+Q:1		DType:1
+/Q:1		DType:2
+DType:3		clock:1
+DType:4		reset:1
+DType:5		D:1
+

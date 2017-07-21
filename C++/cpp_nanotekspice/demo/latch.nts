@@ -1,0 +1,15 @@
+.chipsets:
+input	s
+output	a
+output	b
+4011	nand
+4069	not
+
+.links:
+s:1	nand:1
+s:1	not:1
+not:2	nand:6
+nand:3	nand:5
+nand:4	nand:2
+a:1	nand:3
+b:1	nand:4

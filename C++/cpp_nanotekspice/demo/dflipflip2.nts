@@ -1,0 +1,19 @@
+# Admiral Business Machines 1954-2042
+# One xor gate
+
+.chipsets:
+input		p
+input		d
+clock		c
+input		r
+output		queue
+output		queue_prime
+4013		dt
+
+.links:
+p:1		dt:6
+dt:5		d:1
+c:1		dt:3
+r:1		dt:4
+queue:1		dt:1
+queue_prime:1	dt:2

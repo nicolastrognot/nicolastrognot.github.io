@@ -1,0 +1,6 @@
+.chipsets:
+clock	c
+output	s
+
+.links:
+s:1	c:1
