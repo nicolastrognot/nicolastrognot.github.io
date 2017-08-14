@@ -19,7 +19,7 @@ Here I am to publicize my work, you will find a summary of my projects below. Mo
 
 [**PSU_2016_strace**](https://github.com/nicolastrognot/nicolastrognot.github.io/tree/master/C/PSU_2016_strace) : strace is a program that allows all of the system calls used by a program to be retrieved. It will also allow you to gain a deeper understanding of the system call mechanism.
 
-**PSU_2016_lemipc** : mini-project about the application of semaphores, message queues and segments of shared memory.
+[**PSU_2016_lemipc**](https://github.com/nicolastrognot/nicolastrognot.github.io/tree/master/C/PSU_2016_lemipc) : mini-project about the application of semaphores, message queues and segments of shared memory.
 
 
 ## C++
